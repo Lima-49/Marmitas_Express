@@ -1,5 +1,5 @@
 export default function Home() {
     return (
-        <p>Home</p>
+        <p>Bem vindo ao marmitas express, aqui você pode pedir a marmita que quiser!</p>
     )
 }
