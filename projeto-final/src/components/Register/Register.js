@@ -1,21 +1,14 @@
-import { useContext } from "react"
-import { ClientContext } from "../../ClientContext"
-
-export function Register() {
-    const {clientName, setClientName,
-           clientPhone, setClientPhone,
-           clientAddress, setClientAddress} = useContext(ClientContext)
-
+export default function Register() {
     return (
-        <form action="/">
+        <form>
             <label>Nome:</label>
-            <input required type="text" value={clientName} onChange={e => setClientName(e.target.value)}/>
+            <input type="text" />
             <label>Telefone:</label>
-            <input required type="text" value={clientPhone} onChange={e => setClientPhone(e.target.value)}/>
+            <input type="text" />
             <label>Endereço:</label>
-            <input required type="text" value={clientAddress} onChange={e => setClientAddress(e.target.value)}/>
+            <input type="text" />
 
-            <input type="submit" value="Eviar" />
+            <input type="submit" value="Eviar"/>
         </form>
     )
 }
