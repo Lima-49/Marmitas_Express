@@ -1,0 +1,94 @@
+/* Estilização do navbar */
+
+/* Alinhamento dos elementos dentro da navbar */
+.header{
+    height: 120px;
+    width: 100%;
+    background-color: rgb(252, 233, 204);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .headerContent
+  {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .navbar{
+      display: inline;
+      flex-direction: row;
+      flex-flow: row wrap;
+  }
+
+  /* Estilização do titulo da pagina */
+  .tituloH {
+    font-family: 'Bowlby One SC', cursive;
+    font-style: normal;
+    font-weight: 400;
+    color: #F37113;
+    font-size: 30px;
+  }
+  
+  .logo{
+    max-height: 60px;
+    max-width: 60px;
+  }
+
+  /* Organizando as listas para ficarem na horizontal */
+  .lista-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  /* Container para organizar o titulo e a logo do site  */
+  .logo-nome{
+    text-decoration: none;
+  }
+  
+  .text-link{
+    font-family: Barlow;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+  
+  .page-link {
+    text-decoration: none;
+  }
+  
+  .user-login{
+    box-sizing: border-box;
+    background: url('C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/imagens/usr.png');
+    border: 3px solid #F37113;
+    border-radius: 145px;
+  }
+  
+  li a:hover {
+    color: #F37113;
+    text-decoration: dashed;
+  }
+  
+  /* Estilização do modal de login  */
+  .modalHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .containerHeader
+  {
+    color: red;
+  }
+
+  .user
+  {
+    list-style: none;
+  }

@@ -4,7 +4,7 @@ import Logo from 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolv
 import UserPKT from 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/imagens/usr.png'
 import 'bootstrap/dist/css/bootstrap.css'
 import { Button, Modal} from 'react-bootstrap';
-
+import 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/components/Navbar/index.css'
 
 export default function Navbar() {
 
@@ -62,39 +62,23 @@ export default function Navbar() {
 
         // Navbar que sera utilizado em todas as paginas
         <div className="header">
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                {/*container para organizar os itens dentro do navbar */}
-                <div class="container-fluid">
-
+            <div className='headerContent'>
                     {/*container para organizar a foto e o nome da pagina*/}
-                    <a class="navbar-brand" className='logo-nome' href="#">
+                    <a className='logo-nome' href="#">
                         <Link className='lista-links' to='/'>
                             <p className="tituloH">Marmitas Express</p>
-                            <img src={Logo } alt="logo" width="60" height="" class="d-inline-block align-text-top"></img>
+                            <img className='logo' src={Logo} alt="logo" width="60" height=""></img>
                         </Link>
                     </a>
                     
                     {/* Lista dos caminhos para as outras paginas */}
                     <div>
-                        <ul className='lista-links'>
-                            
-                            {/* Link para pagina de cardapio */}
-                            <li class="nav-link">
-                                <Link className='lista-links' to='/cardapio'>
-                                    <a className='text-link'> Cardapio </a>
-                                </Link>
-                            </li>
-
                             {/* Link para o modal do login */}
-                            <li class="nav-link">
+                            <li class="user">
                                 <ModalLogin/>
                             </li>
-
-                        </ul>
-
                     </div>
-                </div>
-            </nav>
+            </div>
         </div>
     )
 }
