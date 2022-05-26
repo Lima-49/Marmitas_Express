@@ -40,17 +40,38 @@ export default function Navbar() {
                 </Modal.Header>
 
                 {/* Body */}
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Body>
 
-                {/* Footer   */}
-                <Modal.Footer>    
-                    <Button variant="secondary" onClick={handleClose}>
-                    Close
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                    Save Changes
-                    </Button>
-                </Modal.Footer>
+                    
+                    <form>
+                        <ul className='forms'>
+                            <li className='forms_lista'>
+                                <input type='text' id='nome_usr' placeholder='Nome' className='input_estado'></input>
+                            </li>
+                            
+                            <li className='forms_lista'>
+                                <input type='text' id='telefone_usr' placeholder='Telefone' className='input_estado'></input>
+                            </li>
+                            
+                            <li className='input_group'>
+                                <input type='text' id='cidade_usr' placeholder='Cidade' className='input_cidade'></input>
+                                <select  id='estados' className='input_estado'>
+                                    <option selected>Estado</option>
+                                </select>
+                            </li>
+                            
+                            <li className='input_group'>
+                                <input type='text' id='endereco_usr' placeholder='Endereço' className='input_endereco'></input>
+                                <input type='text' id='numero_usr' placeholder='Numero'></input>
+                            </li>
+
+                            <Button onClick={handleClose} className='send_button'>
+                                Enviar
+                            </Button>
+                        </ul>
+                    </form>           
+
+                </Modal.Body>
 
             </Modal>
           </>
