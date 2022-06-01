@@ -9,6 +9,7 @@ import { BrowserRouter as Router,
 import Home from './components/Home/Home';
 import Register from './components/Register/Register';
 import Menu from './components/Menu/Menu';
+import Orders from './components/Orders/Orders';
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
           <Navbar />
       
           <Routes>
-            <Route path='/' element={Home()} />
-            <Route path='/cardapio' element={Menu()} />
+            <Route path='/' element={Menu()} />
+            <Route path='/pedidos' element={Orders()} />
             <Route path='/cadastro' element={Register()} />
           </Routes>
         </div>
