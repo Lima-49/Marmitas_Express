@@ -1,0 +1,45 @@
+.home{
+    background-color: #efefe1;
+    margin: auto;
+    width: auto;
+    height: 2000px;
+}
+
+.cardapio{
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: center;
+    font-family: 'Barlow', sans-serif;
+    color: #FF5C00                  ;
+}
+
+.descricaoProduto{
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.foodImage{
+    display: flex;
+    grid-area: image;
+    width: 496px;
+    height: 274px;
+}
+
+
+
+.tituloFood{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+

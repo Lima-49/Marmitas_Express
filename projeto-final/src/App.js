@@ -19,7 +19,7 @@ function App() {
           <Navbar />
       
           <Routes>
-            <Route path='/' element={Menu()} />
+            <Route path='/' element={Home()} />
             <Route path='/pedidos' element={Orders()} />
             <Route path='/cadastro' element={Register()} />
           </Routes>

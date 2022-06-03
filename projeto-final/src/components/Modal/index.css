@@ -1,0 +1,89 @@
+/* Estilização do modal de login  */
+.modalHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .teste{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .forms {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    list-style-type: none;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-evenly;
+}
+
+  .logo-nome-modal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .containerHeader
+  {
+    color: red;
+  }
+
+  .user
+  {
+    list-style: none;
+  }
+
+
+  /* Estilização do modal */
+
+  .forms{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    list-style-type: none;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+  
+  .forms_lista{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input_group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .input_cidade{
+    flex: 1 1 auto;
+    display: block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  .input_endereco{
+    flex: 1 1 auto;
+    display: block;
+    margin-right: 20px;
+  }
+
+  .input_estado{
+    flex: 1 1 auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .send_button{
+    display: block;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #F37113;
+  }

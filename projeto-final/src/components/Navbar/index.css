@@ -4,7 +4,8 @@
 .header{
     height: 120px;
     width: 100%;
-    background-color: rgb(252, 233, 204);
+    background-color: #FCE9CC;
+    border: 1px solid rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,7 +67,7 @@
   
   .user-login{
     box-sizing: border-box;
-    background: url('C:\Users\eduardo\workspace\Marmitas_Express\projeto-final\src\imagens\usr.png');
+    background: url('C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/imagens/usr.png');
     border: 3px solid #F37113;
     border-radius: 145px;
   }
@@ -76,69 +77,4 @@
     text-decoration: dashed;
   }
   
-  /* Estilização do modal de login  */
-  .modalHeader{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   
-  .containerHeader
-  {
-    color: red;
-  }
-
-  .user
-  {
-    list-style: none;
-  }
-
-
-  /* Estilização do modal */
-
-  .forms{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    list-style-type: none;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-evenly;
-  }
-  
-  .forms_lista{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .input_group{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .input_cidade{
-    flex: 1 1 auto;
-    display: block;
-    margin-right: 20px;
-    margin-bottom: 10px;
-  }
-
-  .input_endereco{
-    flex: 1 1 auto;
-    display: block;
-    margin-right: 20px;
-  }
-
-  .input_estado{
-    flex: 1 1 auto;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .send_button{
-    display: block;
-    align-items: center;
-    margin-top: 10px;
-    background-color: #F37113;
-  }
