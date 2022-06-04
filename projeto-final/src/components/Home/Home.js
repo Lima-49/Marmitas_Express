@@ -1,7 +1,7 @@
 
 import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react';
-import 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/components/Home/index.css'
-import ModalCompra from 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/components/ModalCompra/Modal.js'
+import '../../index.css'
+import ModalCompra from '../ModalCompra/Modal.js'
 
 export default function Home() {
 

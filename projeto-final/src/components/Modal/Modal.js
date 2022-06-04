@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import Logo from 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/imagens/lambreta.png'
-import UserPKT from 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/imagens/usr.png'
+import Logo from '../../imagens/lambreta.png'
+import UserPKT from '../../imagens/usr.png'
 import 'bootstrap/dist/css/bootstrap.css'
 import { Button, Modal} from 'react-bootstrap';
-import 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/components/Modal/index.css'
+import '../../components/Modal/index.css'
 
 
 export default function ModalLogin(){
