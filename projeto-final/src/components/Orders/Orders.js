@@ -1,4 +1,5 @@
 import Order from "../Order/Order"
+import './index.css'
 
 export default function Orders() {
     const orders = [
@@ -24,6 +25,7 @@ export default function Orders() {
                     <th>Pedido</th>
                     <th>Endereço</th>
                     <th>Total do Pedido</th>
+                    <th>Marcar como Entregue</th>
                 </tr>
             </thead>
             <tbody>

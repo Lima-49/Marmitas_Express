@@ -1,0 +1,22 @@
+th, td, tr {
+    border: 1px solid;
+    text-align: center;
+}
+
+th {
+    width: 200px;
+}
+
+table {
+    margin-top: 50px;
+    
+    display: inline-block;
+    text-align: center;
+
+    border: 10px solid white;
+}
+
+thead {
+    font-size: 16px;
+    font-family: "Bowlby One SC";
+}
