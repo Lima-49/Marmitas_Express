@@ -1,0 +1,58 @@
+
+.body{
+    background-color: #EBEAD0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+th, td, tr {
+    border: 0px solid;
+    /* text-align: center;
+    border-left:#EBEAD0;
+    border-top:#EBEAD0;
+    border-bottom: #EBEAD0;
+    border-left: 2px solid black; */
+}
+
+th{
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+}
+
+.titulos{
+    border: 1px solid black;
+    border-left: 1px solid #EBEAD0;
+    border-right: #EBEAD0;
+    border-top: 1px solid #EBEAD0;
+} 
+
+.primeria_coluna{
+    border: 1px solid black;
+    border-top: 1px solid #EBEAD0;
+    border-left: 1px solid #EBEAD0;
+}
+
+td{
+    border: 1px solid red;
+
+}
+
+
+th {
+    width: 200px;
+}
+
+table {
+    margin-top: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+thead {
+    font-size: 16px;
+    font-family: "Bowlby One SC";
+}

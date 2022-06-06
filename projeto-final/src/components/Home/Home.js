@@ -1,7 +1,10 @@
 
 import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react';
-import '../../index.css'
+import 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/components/Home/index.css'
 import ModalCompra from '../ModalCompra/Modal.js'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function Home() {
 
@@ -34,7 +37,7 @@ export default function Home() {
                         <h1 className="titulo">Feijoada</h1>
                         <p className="descricao">Feijoada completa, acompanha: Feijão, arroz, torresmo, couve refogada, bisteca de porco e molho apimentado
                         </p>
-                        <ModalCompra produto="Feijoada" valor="35,90"/>
+                        <ModalCompra produto="Feijoada" valor="35.90"/>
                     </div>
                 </div>
             </div>

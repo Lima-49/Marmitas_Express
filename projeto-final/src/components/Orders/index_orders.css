@@ -1,0 +1,44 @@
+ .body_order{ 
+    background-color: #EBEAD0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 2000px;
+    
+}
+
+.table_order{
+    border: none;
+    margin: 30px;
+}
+
+thead {
+    margin: 20px;
+    font-size: 20px;
+    font-family: "Bowlby One SC";
+    color: #F37113;
+}
+
+th,td{
+    border: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.btn_entregue{
+    color: #EBEAD0;
+    background-color: rgb(66, 197, 66);
+    border-radius: 10px;
+}
+/* .primeria_coluna{
+    border-left: #EBEAD0;
+} */
+
+/* td{
+    border: 1px solid black;
+    border-bottom: #EBEAD0;
+    border-top: #EBEAD0;
+    border-left: #EBEAD0;
+        
+}  */

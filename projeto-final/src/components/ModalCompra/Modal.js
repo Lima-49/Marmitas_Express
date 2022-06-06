@@ -4,12 +4,14 @@ import Logo from '../../imagens/lambreta.png'
 import UserPKT from '../../imagens/usr.png'
 import 'bootstrap/dist/css/bootstrap.css'
 import { Button, Modal} from 'react-bootstrap';
-import '../ModalCompra/index.css'
+import 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/components/ModalCompra/index_compra.css'
 import { createBrowserHistory } from 'history'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-export default function ModalLogin(props){
+export default function ModalCompra(props){
     //Função que aciona o modal para armazenar os dados de login do usuario
-    function ModalLogin() {
+    function ModalCompra() {
 
         //Constante para armazer a variavel se o modal esta aberto ou fechado
         const [show, setShow] = useState(false);
@@ -21,6 +23,18 @@ export default function ModalLogin(props){
         //Variavel para salvar o adicional
         const [adicional, setAdicional] = useState("Adicionais")
         const [preco, setPreco] = useState(" 0,00")
+
+        //Variavel para aramzenar a conta do preco final
+        const [preco_final, setCalculaFinal] = useState(props.valor)
+        
+        //Funcao para fechar o modal quando finalizar a compra
+        const handleClick = () => {
+            toast.error("Compra efetuada com sucesso!")
+        
+            handleClose()
+        }
+
+            
         //Renderizando o modal
         return (
         <>
@@ -51,10 +65,25 @@ export default function ModalLogin(props){
                             <ul className='forms'>
                             
                                 <li className='input_group'>
-                                    <select id='4,50' className='input_adicional' onChange={(e)=>{const selected = e.target.value 
+                                    <select id='4.50' className='input_adicional' onChange={(e)=>{const selected = e.target.value 
+                                                                                                    console.log(selected)
+                                                                                                    if(selected == "Adicionais"){
+                                                                                                        const selectedPreco = "0.00"
+                                                                                                        const calcula =  parseFloat(selectedPreco) + parseFloat(props.valor)
+                                                                                                        setCalculaFinal(calcula)
+                                                                                                        setAdicional(selected)
+                                                                                                        setPreco(selectedPreco)
+                                                                                                    }
+                                                        
+                                                                                                    else{
                                                                                                         const selectedPreco = e.target.id
-                                                                                                            setAdicional(selected)
-                                                                                                            setPreco(selectedPreco)}}>
+                                                                                                        const calcula =  parseFloat(selectedPreco) + parseFloat(props.valor)
+                                                                                                        setCalculaFinal(calcula)
+                                                                                                        setAdicional(selected)
+                                                                                                        setPreco(selectedPreco)
+                                                                                                    }}}>
+                                                                                                        
+
                                         <option selected value={"Adicionais"}>Adicionais</option>
                                         <option value={"Coca-Cola"} >Coca-Cola 250ml</option>
                                         <option value={"Coca-Cola Zero"} >Coca-Cola Zero 250ml</option>
@@ -65,23 +94,25 @@ export default function ModalLogin(props){
                                 </li>
                                 
                                 <li className='input_group'>
-                                    <table>
+                                    <table className='table_modal'>
                                         <tr>
-                                            <th>Produto Selecionado</th>
-                                            <th>Valor</th>
+                                            <th className='th_modal'>Produto Selecionado</th>
+                                            <th className='th_modal'>Valor</th>
                                         </tr>
                                         <tr>
-                                            <td>{props.produto}</td>
-                                            <td>R$ {props.valor}</td>
+                                            <td className='td_modal'>{props.produto}</td>
+                                            <td className='td_modal'>R$ {props.valor}</td>
                                         </tr>
                                         <tr>
-                                            <td>{adicional}</td>
-                                            <td>R$ {preco}</td>
+                                            <td className='td_modal'>{adicional}</td>
+                                            <td className='td_modal'>R$ {preco}</td>
                                         </tr>
                                     </table>
                                 </li>
+                                
+                                <div className='calculo_final'>Preço Final: R$ {preco_final}</div>
 
-                                <Button onClick={handleClose} className='send_button'>
+                                <Button onClick={handleClick} className='send_button'>
                                     Finalizar Compra
                                 </Button>
                             </ul>
@@ -97,6 +128,6 @@ export default function ModalLogin(props){
     }
 
     return (
-        <ModalLogin/>
+        <ModalCompra/>
     )
 }
