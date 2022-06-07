@@ -10,6 +10,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ModalCompra(props){
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     //Função que aciona o modal para armazenar os dados de login do usuario
     function ModalCompra() {
 
@@ -19,7 +24,7 @@ export default function ModalCompra(props){
         //Constantes para abrir e fechar o modal
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
-    
+
         //Variavel para salvar o adicional
         const [adicional, setAdicional] = useState("Adicionais")
         const [preco, setPreco] = useState(" 0,00")
@@ -27,17 +32,20 @@ export default function ModalCompra(props){
         //Variavel para aramzenar a conta do preco final
         const [preco_final, setCalculaFinal] = useState(props.valor)
         
+
+        const handleAlert = () => toast.success('Compra efetuada com sucesso')
+
+
         //Funcao para fechar o modal quando finalizar a compra
-        const handleClick = () => {
-            fetch('http://localhost:2121/api/user', {
-                method: 'post',
-                body: JSON.stringify({"name": "Eduardo", "phone": "2342314",  "adress": "fodase", "pedidos": "Macarrão a Bolonhesa", "price": "43432"})
-            })
-                .then(response => response.text())
-                .then(text => console.log(text))
+        async function handleClick (){
             
-            toast.error("Compra efetuada com sucesso!")
-        
+            //Ativa o alerta da compra
+            handleAlert()
+            
+            //Espera 5 segundos
+            await sleep(5000)
+
+            //Fecha o modal
             handleClose()
         }
 
@@ -118,10 +126,11 @@ export default function ModalCompra(props){
                                 </li>
                                 
                                 <div className='calculo_final'>Preço Final: R$ {preco_final}</div>
-
+                
                                 <Button onClick={handleClick} className='send_button'>
                                     Finalizar Compra
                                 </Button>
+                                <ToastContainer/>                                                                     
                             </ul>
                         </form>           
 
