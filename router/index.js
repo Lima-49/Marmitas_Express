@@ -1,6 +1,7 @@
 const express = require("express")
 const appRouter = express.Router()
 const userRoutes = require('./routes/user')
+const pedidoRouter = require ('./routes/pedidos')
 
 appRouter.use(express.json());
 
@@ -13,7 +14,7 @@ appRouter.use(function (req, res, next) {
     }
     next();
 })
-
+appRouter.use('/pedido', pedidoRouter)
 appRouter.use('/user', userRoutes)
 
 // Not found
