@@ -4,7 +4,7 @@ import Logo from '../../imagens/lambreta.png'
 import UserPKT from '../../imagens/usr.png'
 import 'bootstrap/dist/css/bootstrap.css'
 import { Button, Modal} from 'react-bootstrap';
-import 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/components/ModalCompra/index_compra.css'
+import './index_compra.css'
 import { createBrowserHistory } from 'history'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,6 +29,13 @@ export default function ModalCompra(props){
         
         //Funcao para fechar o modal quando finalizar a compra
         const handleClick = () => {
+            fetch('http://localhost:2121/api/user', {
+                method: 'post',
+                body: JSON.stringify({"name": "Eduardo", "phone": "2342314",  "adress": "fodase", "pedidos": "Macarrão a Bolonhesa", "price": "43432"})
+            })
+                .then(response => response.text())
+                .then(text => console.log(text))
+            
             toast.error("Compra efetuada com sucesso!")
         
             handleClose()

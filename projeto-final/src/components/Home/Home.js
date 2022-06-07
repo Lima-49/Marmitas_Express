@@ -1,6 +1,6 @@
 
 import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react';
-import 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/components/Home/index.css'
+import './index.css'
 import ModalCompra from '../ModalCompra/Modal.js'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

@@ -5,6 +5,7 @@ class UserModel {
       adress,
       phone,
       pedidos,
+      price,
 
     ) {
       this.id = id;
@@ -12,7 +13,7 @@ class UserModel {
       this.adress = adress;
       this.phone = phone;
       this.pedidos = pedidos
-
+      this.price = price;
     }
   }
   

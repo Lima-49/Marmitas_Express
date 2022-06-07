@@ -5,6 +5,7 @@ const userSchema = mongoose.Schema({
   phone: String,
   adress: String,
   pedidos: String,
+  price: String,
 
   create_date: {
     type: Date,

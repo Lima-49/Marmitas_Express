@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react"
 import Order from "../Order/Order"
-import 'C:/Users/Vitor Augusto/Documents/Programas/Faculdade/Desenvolvimento Web/Marmitas_Express/projeto-final/src/components/Orders/index_orders.css'
+import './index_orders.css'
 
 export default function Orders() {
     const orders = [
@@ -17,6 +18,14 @@ export default function Orders() {
         }
     ]
 
+    const [orders2, setOrders2] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:2121/api/user')
+            .then(response => response.json())
+            .then(json => setOrders2(json.data))
+    }, [])
+
     return (
         <div className="body_order">
             <table className="table_order">
@@ -31,7 +40,7 @@ export default function Orders() {
                 </thead>
                 <tbody>
                     {
-                        orders.map(order => <Order order={order} />)
+                        orders2.map(order => <Order order={order} />)
                     }
                 </tbody>
             </table>
